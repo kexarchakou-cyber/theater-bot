@@ -10,7 +10,11 @@ url = "https://www.more.com/gr-el/tickets/theater/sosmenos/"
 
 def check_theater():
 
-    response = requests.get(url)
+    headers = {
+        "User-Agent": "Mozilla/5.0"
+    }
+
+    response = requests.get(url, headers=headers)
 
     soup = BeautifulSoup(response.text, "html.parser")
 
