@@ -1,9 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-import time
 
-BOT_TOKEN = os.getenv("8621923961:AAGosGNkl6a4r5d0eBcK0OtZgT8bnuebrn8")
+BOT_TOKEN = os.getenv("8621923961:AAF2yceeWc9OSZOmmAN0x7cVDCpT-j3dhxc")
 CHAT_ID = os.getenv("7899060721")
 
 url = "https://www.more.com/gr-el/tickets/theater/sosmenos/"
@@ -38,10 +37,4 @@ def check_theater():
         print("Δεν υπάρχουν εισιτήρια.")
 
 
-schedule.every().day.at("12:00").do(check_theater)
-
-print("Το theater bot ξεκίνησε...")
-
-while True:
-    schedule.run_pending()
-    time.sleep(60)
+check_theater()
