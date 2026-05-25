@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-import schedule
+import os
 import time
 
-BOT_TOKEN = "ΤΟ_TOKEN_ΣΟΥ"
-CHAT_ID = "7899060721"
+BOT_TOKEN = os.getenv("8621923961:AAGosGNkl6a4r5d0eBcK0OtZgT8bnuebrn8")
+CHAT_ID = os.getenv("7899060721")
 
 url = "https://www.more.com/gr-el/tickets/theater/sosmenos/"
 
